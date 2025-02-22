@@ -2,31 +2,30 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
 	font: 100%/1.5 system-ui;
-}
-
-
-/* Contêiner do vídeo */
-.video-container {
+  }
+  
+  /* Contêiner do vídeo */
+  .video-container {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100vh;
 	z-index: -1;
-}
-
-.video-container video {
+  }
+  
+  .video-container video {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-}
-
-/* Seção com título e parágrafo */
-.start {
+  }
+  
+  /* Seção com título e parágrafo */
+  .start {
 	position: relative;
 	width: 100%;
 	height: 100vh;
@@ -35,40 +34,63 @@ body {
 	font-family: Arial, sans-serif;
 	color: white;
 	z-index: 100;
-}
-
-/* Estilização do texto */
-.start h1 {
+  }
+  
+  /* Estilização do texto */
+  .start h1 {
 	font-size: 3rem;
 	font-weight: bold;
-}
-
-.start p {
+  }
+  
+  .start p {
 	font-size: 1.5rem;
-}
-
-/* Adiciona um fundo escuro semi-transparente para melhor leitura */
-.overlay {
+  }
+  
+  /* Adiciona um fundo escuro semi-transparente para melhor leitura */
+  .overlay {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100vh;
-	background: rgba(0, 0, 0, 0.9); /* Escurece o fundo sem esconder o vídeo */
+	background: rgba(0, 0, 0, 0.9);
 	z-index: 0;
-}
-
-.text-holder {
+  }
+  
+  .text-holder {
 	position: relative;
 	z-index: 1;
-	width: 100%;
-	height: 400px;
+	width: 90%;
+	max-width: 1200px;
+	margin: 2% auto;
+	padding: 2%;
 	background-color: rgb(218, 218, 230);
-}
-
-.text-holder-nobc {
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .text-holder h2 {
+	text-align: center;
+	margin-bottom: 1rem;
+	font-family: Arial, sans-serif;
+  }
+  
+  .text-holder p {
+	text-align: justify;
+	margin: 1rem 0;
+	line-height: 1.6;
+	font-family: Arial, sans-serif;
+  }
+  
+  /* Container do gráfico */
+  #chart {
 	position: relative;
-	z-index: 1;
-	width: 100%;
-	height: 400px;
-}
+	z-index: 10;
+	margin: 2% 5%; 
+	width: 90%;
+	height: 400px; 
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+  }
+  

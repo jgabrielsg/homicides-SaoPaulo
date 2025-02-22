@@ -1,36 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> T1-MachadoJoão </title>
-    
-    <link rel="stylesheet" href="style.css">
-</head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T1-MachadoJoão</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <div class="video-container">
+    <video autoplay muted loop>
+      <source src="videos/best.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
-<body> 
-    <div class="video-container">
-        <video autoplay muted loop>
-            <source src="images/best.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+  <div class="overlay"></div>
 
-    <div class="overlay"></div>
+  <!-- Texto central -->
+  <div class="start">
+    <h1>T1 - Visualização</h1>
+    <p>João Gabriel Machado</p>
+    <p>👇⏬</p>
+  </div>
 
-    <!-- Texto no meio da tela -->
-    <div class="start">
-        <h1 >T1 - Visualização</h1>
-        <p>João Gabriel Machado</p>
-    </div>
-
-    <div class="text-holder">
-        <p> LOL! </p>
-    </div>
-
-    <div class="text-holder-nobc">
-        <p> LOL! </p>
-    </div>
-
-</body> <!-- End of "body" section  -->
+  <div class="text-holder">
+    <h2>O Período de Inverno é o mais Seguro para Visitar São Paulo?</h2>
+    <p>
+      Para responder à pergunta, eu já obtive algumas informações no meu trabalho do T0, que cheguei em uma questão similar: "Qual a Melhor Estação do Ano para Visitar São Paulo?" Agora, com mais dados, abrangendo mais anos e cidades para análise, decidi manter a mesma ideia na T1 – com uma mudança pequena no estilo da pergunta, pois senti que poderia aprofundar a investigação que comecei previamente.
+    </p>
+    <p>
+      Durante a preparação dos dados, realizei uma limpeza geral – removendo, por exemplo, os dados incompletos de 2021 – e converti os valores de mês e ano para datas, permitindo a construção correta do gráfico de linha. Optei por usar o D3.js por dois motivos: a curiosidade gerada após a apresentação da biblioteca em aula e a facilidade de integrar o gráfico em JavaScript diretamente no HTML, superando algumas dificuldades encontradas com Python que tenho para fazer isso. Decidi fazer o entregável como um website pois queria entregar uma estética mais legal.
+    </p>
+    <p>
+      A escolha de cores e do layout também foi feita com o intuito de melhorar a legibilidade e a estética da visualização, mantendo-a simples. Usei um gráfico de linhas, pois ele se adequa melhor a dados temporais. Para destacar a hipótese levantada após os gráficos da primeira tarefa, utilizei um <i>span</i> para enfatizar os meses de inverno e demonstrar que, em média, o número de homicídios é inferior comparado às outras estações, especialmente ao verão.
+    </p>
+    <p>
+      O processo de produção da primeira tarefa foi essencial para aprimorar a T1. Os esboços iniciais e as reflexões sobre como alcançar a melhor visualização possível que tive de fazer previamente foram bem úteis nessa tarefa. Dessa vez, evitei gráficos de área ou representações que destacavam individualmente cada cidade, o que pode obscurecer informações relevantes de cidades menores, mas essa escolha permitiu que meu gráfico ficasse menos poluído e mais intuitivo para o leitor.
+    </p>
+    <p>
+      Em resumo, a visualização construída revela sazonalidades importantes, evidenciando que o número de homicídios em São Paulo é consideravelmente menor no período de inverno. O uso do D3.js exigiu um cuidado maior em cada elemento visual, já que tive que programar cada um deles individualmente, o que fez com que eu pensasse mais na sua produção e deixasse-o mais claro e alinhado com a pergunta proposta. Penso em usar o D3.js no futuro, gostei de trabalhar com SVG's com ele.
+    </p>
+  
+    <div id="chart"></div>
+    <script src="script.js"></script>
+  </div>
+</body>
 </html>
